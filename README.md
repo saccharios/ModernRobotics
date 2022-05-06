@@ -1,5 +1,14 @@
 # Fork of https://github.com/NxRLab/ModernRobotics
 
+As part of modern robotics course on coursera I am doing, I have to complete some coding tasks.
+
+My code is in /packages/Python, named like courseX_weekY.py. The most intersting file is course4_week1.py where I implemente an RRT.
+
+~ Stefan
+
+
+
+------------------------------------------------------------------------------
 # Modern Robotics:  Mechanics, Planning, and Control
 # Code Library
 
