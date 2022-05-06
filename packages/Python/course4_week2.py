@@ -8,6 +8,7 @@ from typing import List, Dict, Any, Tuple
 
 from anytree import Node, RenderTree, PreOrderIter, Walker
 
+# pip3 install anytree
 
 class Point:
     def __init__(self, x: float, y: float) -> None:
@@ -193,14 +194,13 @@ def write_to_csv(root: Node, base_path: pathlib.Path, end: Point) -> None:
 
 if __name__ == '__main__':
     obstacles = read_in_obstacles(
-        pathlib.Path('/packages/Python/results_course4_week2/obstacles.csv'))
+        pathlib.Path('/home/sv/bags/modern-robotics/packages/Python/results_course4_week2/obstacles.csv'))
     start = Point(x=-0.5, y=-0.5)
     end = Point(x=0.5, y=0.5)
     success, root = run_RRT(obstacles, start, end)
+    write_to_csv(root, pathlib.Path('/home/sv/bags/modern-robotics/packages/Python/results_course4_week2'), end)
     if success:
         print("Success")
         print_tree(root)
-        write_to_csv(root, pathlib.Path('/packages/Python/results_course4_week2'), end)
     else:
-        write_to_csv(root, pathlib.Path('/packages/Python/results_course4_week2'), end)
         print("Failure")

@@ -59,7 +59,7 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(disk.intersects(code.Line(start,end)))
 
     def test_is_collision_free(self):
-        obstacles = code.read_in_obstacles(pathlib.Path('/packages/Python/results_course4_week2/obstacles.csv'))
+        obstacles = code.read_in_obstacles(pathlib.Path('/home/sv/bags/modern-robotics/packages/Python/results_course4_week2/obstacles.csv'))
         start = code.Point(x=-0.5,y=-0.5)
         end = code.Point(x=-0.28899437717111176,y=-0.21233798104890322)
         self.assertFalse(code.is_collision_free(obstacles,code.Line(start,end)))
